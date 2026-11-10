@@ -378,3 +378,4 @@ def _make_slug(text: str) -> str:
     )
     slug = re.sub(r"[^a-z0-9_]", "", raw.translate(vi_map))
     return slug[:32] or "threads_video"
+

@@ -221,3 +221,4 @@ def _call_gemini_batch(
     if isinstance(parsed, dict):
         return {str(k): str(v) for k, v in parsed.items()}
     return {}
+

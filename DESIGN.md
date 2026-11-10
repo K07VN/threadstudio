@@ -14,3 +14,4 @@
    - **Left Rail**: Collapsible `Sidebar` (`220px` / `56px`) with live queue & pending-review `Badge` counters.
    - **Center Workspace**: Task-focused pages (`Batch Queue DataTable`, `Inline Script Inspector`, `Voice Pool`, `Media Presets`, `Settings`).
    - **Right Stage (`380px`–`460px`)**: Persistent `9:16` interactive layout canvas + `VideoPlayer` output preview, anchored above a collapsible multi-worker `LogViewer`.
+

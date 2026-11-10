@@ -14,3 +14,4 @@
 3. **Inline Script Inspector**: Reorder segments, toggle inclusion, edit spoken text, preview individual voice lines, and see live Threads card renders side-by-side without blocking background render workers.
 4. **Multi-Engine AI Voice Router**: Mix and match voices from `K07VN/capcut-tts-api` (24 Vietnamese streaming voices), `edge-tts` (`Hoài My`, `Nam Minh`), and `pnnbao97/VieNeu-TTS` (local 48kHz + voice cloning) within a single video.
 5. **Direct `9:16` Stage & GPU FFmpeg Compositor**: Drag/resize card and B-roll regions directly on a `9:16` preview stage and render `1080x1920` H.264 MP4s concurrently via `h264_nvenc` / `libx264`.
+

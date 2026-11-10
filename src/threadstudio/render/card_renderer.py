@@ -325,3 +325,4 @@ def _draw_metric_text(painter: QPainter, font: QFont, color: QColor, x: float, c
         label,
     )
     return x + w
+

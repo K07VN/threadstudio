@@ -27,23 +27,18 @@ def ensure_sample_assets(root: Path | None = None) -> Path:
         d.mkdir(parents=True, exist_ok=True)
 
     bg_mp4 = bg_dir / "grid_tunnel_3d.mp4"
-    if not bg_mp4.exists():
+    if not any(bg_dir.glob("*.mp4")):
         _generate_3d_grid_tunnel_mp4(bg_mp4, width=720, height=1280, fps=24, seconds=4)
 
-    sub_mp4_1 = sub_dir / "broll_neon_wave.mp4"
-    sub_mp4_2 = sub_dir / "broll_starfield.mp4"
-    if not sub_mp4_1.exists():
-        _generate_broll_wave_mp4(sub_mp4_1, width=640, height=360, fps=24, seconds=4)
-    if not sub_mp4_2.exists():
-        _generate_broll_starfield_mp4(sub_mp4_2, width=640, height=360, fps=24, seconds=4)
+    if not any(sub_dir.glob("*.mp4")):
+        _generate_broll_wave_mp4(sub_dir / "broll_neon_wave.mp4", width=640, height=360, fps=24, seconds=4)
+        _generate_broll_starfield_mp4(sub_dir / "broll_starfield.mp4", width=640, height=360, fps=24, seconds=4)
 
-    bgm_wav = bgm_dir / "lofi_story_warm.wav"
-    if not bgm_wav.exists():
-        _generate_warm_bgm_wav(bgm_wav, duration_sec=16.0)
+    if not any(bgm_dir.glob("*.*")):
+        _generate_warm_bgm_wav(bgm_dir / "lofi_story_warm.wav", duration_sec=16.0)
 
-    sfx_wav = sfx_dir / "card_pop.wav"
-    if not sfx_wav.exists():
-        _generate_pop_sfx_wav(sfx_wav)
+    if not any(sfx_dir.glob("*.*")):
+        _generate_pop_sfx_wav(sfx_dir / "card_pop.wav")
 
     return media_root
 
@@ -232,3 +227,4 @@ def _generate_pop_sfx_wav(out_path: Path, sr: int = 44100) -> None:
         wf.setsampwidth(2)
         wf.setframerate(sr)
         wf.writeframes(stereo.tobytes())
+

@@ -276,3 +276,4 @@ class BatchPipelineManager(QObject):
             vieneu_clone_ref_audio=self.settings.vieneu_clone_ref_audio,
             vieneu_clone_ref_text=self.settings.vieneu_clone_ref_text,
         )
+

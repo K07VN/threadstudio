@@ -77,6 +77,7 @@ from .widgets.stage_canvas import InteractiveStageCanvas
 
 Signal = getattr(QtCore, "pyqtSignal", None) or getattr(QtCore, "Signal")
 logger = logging.getLogger("threadstudio")
+logger.setLevel(logging.INFO)
 
 
 class _AsyncUiBridge(QObject := QtCore.QObject):
@@ -170,7 +171,7 @@ class ThreadsStudioWindow(FluentWindow):
         log_panel = self._build_log_panel()
         self._body_log_splitter.addWidget(workspace_holder)
         self._body_log_splitter.addWidget(log_panel)
-        self._body_log_splitter.setSizes([660, 155])
+        self._body_log_splitter.setSizes([665, 195])
 
         root_col.addWidget(self._body_log_splitter, 1)
         self.set_central_widget(root)

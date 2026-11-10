@@ -6,7 +6,11 @@ build-backend = "setuptools.build_meta"
 name = "threadstudio"
 version = "2.0.0"
 description = "High-throughput multi-threaded Threads comment video studio built with Fluent Blue (PyQt6)"
-readme = "PRODUCT.md"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+    { name = "K07VN", email = "k07vn@users.noreply.github.com" },
+]
 requires-python = ">=3.10"
 dependencies = [
     "fluent-blue[pyqt6]>=0.2.0",
@@ -19,6 +23,11 @@ dependencies = [
     "aiohttp>=3.9.0",
     "requests>=2.31.0",
 ]
+
+[project.urls]
+Homepage = "https://tnkre.dev"
+Decompiler = "https://decompile.tnkre.dev"
+Repository = "https://github.com/K07VN/threadstudio"
 
 [project.scripts]
 threadstudio = "threadstudio.app:main"

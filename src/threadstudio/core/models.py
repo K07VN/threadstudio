@@ -214,3 +214,4 @@ class VideoJob:
     @property
     def enabled_segments(self) -> list[SegmentItem]:
         return [s for s in self.segments if s.enabled and (s.spoken_text.strip() or s.raw_text.strip())]
+
