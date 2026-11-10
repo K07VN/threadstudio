@@ -6,6 +6,5 @@ build/
 dist/
 output/
 user_data/
-assets/sample_media/
 .video-review/
-*.mp4
+snaptik.vn_*.mp4
