@@ -188,8 +188,8 @@ threadstudio/
 │   └── ui/
 │       ├── main_window.py                # Giao diện chính 5 phân khu + CommandPalette (Ctrl+K)
 │       └── widgets/stage_canvas.py       # Sân khấu 9:16 kéo-thả & phóng thu trực tiếp
-└── tests/
-    └── test_pipeline_e2e.py              # Bộ kiểm thử tự động & kiểm chứng chạy lô đa luồng
+└── scripts/
+    └── download_media_pack.py            # Script tự tải gói Meme, BGM, SFX & nền 9:16 online
 ```
 
 ---
